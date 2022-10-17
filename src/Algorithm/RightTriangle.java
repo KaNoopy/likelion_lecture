@@ -2,8 +2,8 @@ package Algorithm;
 
 public class RightTriangle {
     public static void main(String[] args) {
-        for (int i = 0; i <5; i++ ) {
-            for (int j = 1; j <=i ; j++) {
+        for (int i = 0; i <4; i++ ) {
+            for (int j = 0; j <=i ; j++) {
                 System.out.printf("*");
             }
             System.out.println();
@@ -12,8 +12,8 @@ public class RightTriangle {
 }
 /*
 출력물
-        *
-        **
-        ***
-        ****
+*
+**
+***
+****
 */
