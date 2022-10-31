@@ -18,13 +18,18 @@ public class Test {
     public int[] solution(int[] answers) {
         int firstStudentAnswerCnt = 0;
         int[] firstStudentAnswerArr = {1, 2, 3, 4, 5};
+        int[] secondStudentAnswerArr = {2, 1, 2, 3, 2, 4, 2, 5};
+        int[] thirdStudentAnswerArr = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
+
         for (int i = 0; i < firstStudentAnswerArr.length; i++) {
             for (int j = 0; j < answers.length; j++) {
-
+                if (firstStudentAnswerArr[i] ==answers[j]) {
+                    firstStudentAnswerCnt++;
+                }
             }
-        }
 
-        return new int[0];
+        }
+        return new int[0]; //배열로 리턴...??
     }
 
 
@@ -32,7 +37,7 @@ public class Test {
         int[] A = {1, 2, 3, 4, 5};
         int[] B = {1, 3, 2, 4, 2};
         Test test = new Test();
-        System.out.println();
+        System.out.println(A);
 
     }
 }
