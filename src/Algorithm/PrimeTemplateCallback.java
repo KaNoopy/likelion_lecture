@@ -9,13 +9,13 @@ package Algorithm;
 interface StatementStrategy {
     boolean compare(int a, int b);
 }
-class primeStrategy implements StatementStrategy {
-
-    @Override
-    public boolean compare(int a, int b) {
-        return a<b;
-    }
-}
+//class primeStrategy implements StatementStrategy {
+//
+//    @Override
+//    public boolean compare(int a, int b) {
+//        return a<b;
+//    }
+//}
 public class PrimeTemplateCallback { //templateCallback 적용 2단계
     public boolean solution(int n,StatementStrategy st) {
         for (int i = 2; st.compare(i,n); i++) {
@@ -26,7 +26,12 @@ public class PrimeTemplateCallback { //templateCallback 적용 2단계
 
     public static void main(String[] args) {
         PrimeTemplateCallback prime = new PrimeTemplateCallback();
-        System.out.println(prime.solution(13,new primeStrategy()));
+        System.out.println(prime.solution(13, new StatementStrategy() {
+            @Override
+            public boolean compare(int a, int b) {
+                return a<b;
+            }
+        }));
     }
 
 }
