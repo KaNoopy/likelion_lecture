@@ -7,6 +7,7 @@ public class HarshadNumber {
     public boolean solution(int x) {
         boolean answer=true;
 
+        int orginX = x;
         // 자리수의 합 구하기
         int result = 0;
         while (x > 0) {
@@ -15,9 +16,8 @@ public class HarshadNumber {
         }
 
         //하샤드 수면 true
-        if (!(x / result == 0))
-            return answer=false;
-        return answer;
+        if (orginX / result == 0) return answer;
+        return answer=false;
     }
 
     public static void main(String[] args) {
