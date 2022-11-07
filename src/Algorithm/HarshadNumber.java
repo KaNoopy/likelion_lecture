@@ -5,7 +5,7 @@ package Algorithm;
 
 public class HarshadNumber {
     public boolean solution(int x) {
-        boolean answer = true;
+        boolean answer=true;
 
         // 자리수의 합 구하기
         int result = 0;
@@ -13,16 +13,15 @@ public class HarshadNumber {
             result += x % 10;
             x = x / 10;
         }
+
         //하샤드 수면 true
-        if (x / result == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        if (!(x / result == 0))
+            return answer=false;
+        return answer;
     }
 
     public static void main(String[] args) {
         HarshadNumber harshadNumber = new HarshadNumber();
-        System.out.println(harshadNumber.solution(10));
+        System.out.println(harshadNumber.solution(11));
     }
 }
